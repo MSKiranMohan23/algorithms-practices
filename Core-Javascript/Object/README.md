@@ -1,0 +1,1 @@
+#Implement Calculate(10).add(4).sub(2).result()#
