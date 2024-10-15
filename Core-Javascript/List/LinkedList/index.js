@@ -27,6 +27,7 @@ class LinkedList {
       currentNode.next = newNode;
     }
     this.size += 1;
+    this.printList()
   }
   //Add item at the starting (Prepend)
   prepend(value) {
@@ -35,6 +36,7 @@ class LinkedList {
     newNode.next = this.head;
     this.head = newNode;
     this.size += 1;
+    this.printList()
   }
   // Print the list items
   printList() {
@@ -45,6 +47,7 @@ class LinkedList {
       currentNode = currentNode.next;
     }
     console.log(`${listString}null`);
+    console.log('Size =>', this.getSize())
   }
 
   // Removing item from list
@@ -63,6 +66,7 @@ class LinkedList {
       currentNode.next = currentNode.next.next;
       this.size -= 1;
     }
+    this.printList()
   }
   contains(value) {
     let currentNode = this.head;
@@ -78,3 +82,12 @@ class LinkedList {
     return this.size;
   }
 }
+
+const newList = new LinkedList();
+newList.prepend(8)
+newList.append(10)
+newList.prepend(9)
+newList.append(12)
+newList.append(18)
+newList.prepend(19)
+newList.printList()
